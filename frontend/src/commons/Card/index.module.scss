@@ -1,0 +1,16 @@
+@use '@/styles/variable' as *;
+
+.cover {
+  width: inherit;
+  aspect-ratio: 58 / 89;
+  height: auto;
+  border-radius: 0.5rem;
+  background-color: $white;
+  position: relative;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+
+  .image {
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+}

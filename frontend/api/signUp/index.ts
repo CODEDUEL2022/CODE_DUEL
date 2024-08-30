@@ -1,15 +1,16 @@
 /* eslint-disable */
-import type * as Types from '../@types'
+import type { DefineMethods } from 'aspida';
+import type * as Types from '../@types';
 
-export type Methods = {
+export type Methods = DefineMethods<{
   /** ユーザーの登録を行う。初回アクセス時のみフロントからリクエストが送られる。 */
   post: {
-    status: 200
+    status: 200;
     /** OK */
-    resBody: Types.User
+    resBody: Types.User;
 
     reqBody: {
-      user_name?: string | undefined
-    }
-  }
-}
+      user_name?: string | undefined;
+    };
+  };
+}>;

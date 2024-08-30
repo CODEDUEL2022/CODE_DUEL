@@ -1,16 +1,17 @@
 /* eslint-disable */
-import type * as Types from '../@types'
+import type { DefineMethods } from 'aspida';
+import type * as Types from '../@types';
 
-export type Methods = {
+export type Methods = DefineMethods<{
   /** ログインを行う。ブラウザにidが保存されている場合にリクエストが送られる。 */
   post: {
-    status: 200
+    status: 200;
     /** OK */
-    resBody: Types.User
+    resBody: Types.User;
 
     reqBody: {
-      user_id?: string | undefined
-      user_name?: string | undefined
-    }
-  }
-}
+      user_id?: string | undefined;
+      user_name?: string | undefined;
+    };
+  };
+}>;

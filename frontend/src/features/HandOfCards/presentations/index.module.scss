@@ -1,0 +1,41 @@
+@use '@/styles/variable' as *;
+
+.deck {
+  display: flex;
+  justify-content: center;
+  max-width: 24rem;
+
+  .list {
+    list-style: none;
+
+    &:not(:last-child) {
+      min-width: 0;
+      margin-right: -2rem;
+    }
+
+    transition-property: flex-shrink, translate;
+    transition-duration: 0.2s;
+    isolation: isolate;
+
+    &:hover {
+      flex-shrink: 0;
+      translate: 0 -1rem;
+    }
+
+    .active {
+      transform: translateY(-1rem);
+    }
+
+    .card {
+      width: 6rem;
+
+      --degree: calc((var(--index) - ((var(--length) - 1) / 2)) * 6deg);
+      rotate: var(--degree);
+      translate: 0 calc((1 - cos(var(--degree))) * 300%);
+    }
+  }
+
+  .head {
+    order: -1;
+  }
+}

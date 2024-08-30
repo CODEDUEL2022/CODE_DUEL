@@ -1,11 +1,12 @@
 /* eslint-disable */
-import type * as Types from '../@types'
+import type { DefineMethods } from 'aspida';
+import type * as Types from '../@types';
 
-export type Methods = {
+export type Methods = DefineMethods<{
   /** カード一覧を取得する */
   get: {
-    status: 200
+    status: 200;
     /** OK */
-    resBody: Types.Card[]
-  }
-}
+    resBody: Types.Card[];
+  };
+}>;

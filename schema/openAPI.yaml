@@ -162,6 +162,8 @@ components:
       title: card
       type: object
       properties:
+        id:
+          type: integer
         name:
           type: string
         value:
@@ -172,6 +174,7 @@ components:
         image_src:
           type: string
       required:
+        - id
         - name
         - value
         - type
